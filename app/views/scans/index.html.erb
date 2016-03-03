@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Дочерние Общества</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Название Дочернего Общества</th>
+      <th>Описание</th>
+      <th>Адрес расположения</th>
+      <th>Контактный телефон</th>
+      <th>Факс</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scans.each do |scan| %>
+	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td><%= scan.do_name %></td>
+        <td><%= scan.do_description %></td>
+        <td><%= scan.do_address %></td>
+        <td><%= scan.do_phone %></td>
+        <td><%= scan.do_fax %></td>
+        <td class="list_actions"><%= link_to 'Показать информацию', scan %></td>
+        <td class="list_actions"><%= link_to 'Редактировать', edit_scan_path(scan) %></td>
+        <td><%= link_to 'Удалить', scan, method: :delete, data: { confirm: 'Вы точно уверены?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Внести Новое Дочернее Общесто', new_scan_path %>

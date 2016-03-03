@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Дочернее Общество:</strong>
+  <%= @scan.do_name %>
+</p>
+
+<p>
+  <strong>Do description:</strong>
+  <%= @scan.do_description %>
+</p>
+
+<p>
+  <strong>Do address:</strong>
+  <%= @scan.do_address %>
+</p>
+
+<p>
+  <strong>Do phone:</strong>
+  <%= @scan.do_phone %>
+</p>
+
+<p>
+  <strong>Do fax:</strong>
+  <%= @scan.do_fax %>
+</p>
+
+<%= link_to 'Редактировать', edit_scan_path(@scan) %> |
+<%= link_to 'Назад', scans_path %>
