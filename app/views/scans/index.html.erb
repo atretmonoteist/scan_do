@@ -2,7 +2,7 @@
 
 <h1>Дочерние Общества</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Название Дочернего Общества</th>
@@ -22,8 +22,8 @@
         <td><%= scan.do_address %></td>
         <td><%= scan.do_phone %></td>
         <td><%= scan.do_fax %></td>
-        <td class="list_actions"><%= link_to 'Показать информацию', scan %></td>
-        <td class="list_actions"><%= link_to 'Редактировать', edit_scan_path(scan) %></td>
+        <td><%= link_to 'Показать информацию', scan %></td>
+        <td><%= link_to 'Редактировать', edit_scan_path(scan) %></td>
         <td><%= link_to 'Удалить', scan, method: :delete, data: { confirm: 'Вы точно уверены?' } %></td>
       </tr>
     <% end %>
